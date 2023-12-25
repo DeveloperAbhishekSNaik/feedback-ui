@@ -11,6 +11,8 @@ import  {v4 as uuidv4} from 'uuid';
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import AboutPages from './components/pages/AboutPages';
 import AboutLinkIcon from './components/AboutLinkIcon';
+import Post from './components/Post';
+import NotFound from './components/NotFound';
 
 function App(){
     const [feedback , setFeedback ] = useState(FeedbackData);
@@ -47,6 +49,16 @@ function App(){
            }>
 
            </Route> 
+           <Route path='/about' element={
+            <Post />
+           }>
+
+           </Route>
+           <Route path='/NotFound' element={
+            <NotFound />
+           }>
+
+           </Route>  
         </Routes>
         </div>
         </Router>
